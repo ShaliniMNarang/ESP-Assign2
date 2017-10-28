@@ -1,5 +1,10 @@
 package com.backBenchers.twitter.service;
 
+/**
+ * 
+ * @author shalininarang
+ *
+ */
 public abstract class TwitterAPIConfig {
 
 	//todo - modify and put it in a static block to initialize from property file

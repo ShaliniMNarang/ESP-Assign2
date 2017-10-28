@@ -14,24 +14,24 @@ import com.backBenchers.twitter.service.TwitterAPIService;
 
 /**
  * 
- * @author pujakawale
+ * @author shalininarang
  *
  */
 @RunWith(MockitoJUnitRunner.class)
-public class TwitterAPIPostTweetBeanTest {
+public class TwitterAPIGeoBeanTest {
 	
 	@Mock
 	TwitterAPIService twitterAPIServiceMock;
 	
 	@InjectMocks
-	TwitterAPIPostTweetBean twitterAPIPostTweetBean;
+	TwitterAPIGeoBean twitterAPIGeoBean;
 	
 	@Test
 	public void test() {
 		
-		when(twitterAPIServiceMock.postTweet(anyString())).thenReturn("message sent");
+		when(twitterAPIServiceMock.getGeoCode(anyString())).thenReturn("message posted");
 		
-		assertEquals("message sent",twitterAPIPostTweetBean.postTweet("test"));
+		assertEquals("message posted",twitterAPIGeoBean.getGeo("37.279518: -121.867905"));
 	}
 
 }

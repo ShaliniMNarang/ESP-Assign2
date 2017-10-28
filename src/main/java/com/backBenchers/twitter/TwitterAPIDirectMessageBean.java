@@ -2,7 +2,11 @@ package com.backBenchers.twitter;
 
 import com.backBenchers.twitter.service.TwitterAPIService;
 
-
+/**
+ * 
+ * @author chidanandapati
+ *
+ */
 public class TwitterAPIDirectMessageBean extends TwitterAPIConfig {
 	
 	//private static final Logger LOG = LoggerFactory.getLogger(TwitterAPIBean.class);

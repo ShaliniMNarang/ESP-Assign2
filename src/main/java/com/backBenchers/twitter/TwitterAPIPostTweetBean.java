@@ -5,7 +5,11 @@ import org.slf4j.LoggerFactory;
 
 import com.backBenchers.twitter.service.TwitterAPIService;
 
-
+/**
+ * 
+ * @author pujakawale
+ *
+ */
 public class TwitterAPIPostTweetBean extends TwitterAPIConfig {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TwitterAPIPostTweetBean.class);

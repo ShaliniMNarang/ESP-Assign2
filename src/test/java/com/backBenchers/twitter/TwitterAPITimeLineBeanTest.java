@@ -12,7 +12,11 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.backBenchers.twitter.service.TwitterAPIService;
 
-
+/**
+ * 
+ * @author pujakawale
+ *
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class TwitterAPITimeLineBeanTest {
 	
@@ -25,9 +29,9 @@ public class TwitterAPITimeLineBeanTest {
 	@Test
 	public void test() {
 		
-		when(twitterAPITimeLineBean.getTimeline(anyString())).thenReturn("message posted");
+		when(twitterAPIServiceMock.getTimeline(anyString())).thenReturn("timeline-tweets");
 		
-		assertEquals("message posted",twitterAPITimeLineBean.getTimeline("test"));
+		assertEquals("timeline-tweets",twitterAPITimeLineBean.getTimeline("test"));
 	}
 
 }

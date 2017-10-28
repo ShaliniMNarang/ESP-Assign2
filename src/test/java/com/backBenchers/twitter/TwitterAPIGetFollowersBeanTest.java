@@ -1,7 +1,6 @@
 package com.backBenchers.twitter;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -14,24 +13,24 @@ import com.backBenchers.twitter.service.TwitterAPIService;
 
 /**
  * 
- * @author pujakawale
+ * @author gyaneshpandey
  *
  */
 @RunWith(MockitoJUnitRunner.class)
-public class TwitterAPIPostTweetBeanTest {
+public class TwitterAPIGetFollowersBeanTest {
 	
 	@Mock
 	TwitterAPIService twitterAPIServiceMock;
 	
 	@InjectMocks
-	TwitterAPIPostTweetBean twitterAPIPostTweetBean;
+	TwitterAPIGetFollowersBean twitterAPIGetFollowersBean;
 	
 	@Test
 	public void test() {
 		
-		when(twitterAPIServiceMock.postTweet(anyString())).thenReturn("message sent");
+		when(twitterAPIServiceMock.getFollowers()).thenReturn("followers-list");
 		
-		assertEquals("message sent",twitterAPIPostTweetBean.postTweet("test"));
+		assertEquals("followers-list",twitterAPIGetFollowersBean.getFollowers());
 	}
 
 }

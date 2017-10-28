@@ -11,6 +11,11 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.backBenchers.twitter.service.TwitterAPIService;
 
+/**
+ * 
+ * @author chidanandapati
+ *
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class TwitterAPIGetTrendsBeanTest {
 	

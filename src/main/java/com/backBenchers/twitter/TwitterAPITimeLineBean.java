@@ -2,7 +2,11 @@ package com.backBenchers.twitter;
 
 import com.backBenchers.twitter.service.TwitterAPIService;
 
-
+/**
+ * 
+ * @author pujakawale
+ *
+ */
 public class TwitterAPITimeLineBean extends TwitterAPIConfig {
 	
 	//private static final Logger LOG = LoggerFactory.getLogger(TwitterAPIBean.class);

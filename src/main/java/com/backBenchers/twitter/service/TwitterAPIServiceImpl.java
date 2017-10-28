@@ -23,10 +23,23 @@ import twitter4j.TwitterFactory;
 import twitter4j.User;
 import twitter4j.auth.AccessToken;
 
+/**
+ * Implements all methods of TwitterAPIService
+ * @author shalininarang
+ * @author chidanandapati
+ * @author gyaneshpandey
+ * @author pujakawale
+ *
+ */
 public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAPIService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(TwitterAPIServiceImpl.class);
 
+	/**
+	 * Get tweets for a search pattern
+	 * @param param search pattern for tweet
+	 * @return 		tweets
+	 */
 	public String getTweet(String param) {
 		try {
 
@@ -61,6 +74,11 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		}
 	}
 
+	/**
+	 * Tweets for a geo code
+	 * @param param search tweets for geo code
+	 * @return 		tweets
+	 */
 	public String getGeoCode(String param) {
 		try {
 
@@ -107,6 +125,11 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		}
 	}
 
+	/**
+	 * Post a tweet
+	 * @param param  message to post as tweet
+	 * @return 		message sent
+	 */
 	public String postTweet(String param) {
 
 		try {
@@ -135,6 +158,11 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		}
 	}
 
+	/**
+	 * Get daily trends
+	 * @param param  
+	 * @return 		daily trends
+	 */
 	@Override
 	public String getTrends(String param) {
 		StringBuffer sb = new StringBuffer();
@@ -173,6 +201,11 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 
 	}
 
+	/**
+	 * Sends a direct message to a follower
+	 * @param param  message
+	 * @return 		 confirmation message
+	 */
 	@Override
 	public String directMessage(String param) {
 		// TODO Auto-generated method stub
@@ -194,6 +227,11 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		return values[0] + " sent to" + values[1] + " with status " + status;
 	}
 
+	/**
+	 * Get timeline tweets
+	 * @param param  
+	 * @return 		 tweets from timeline
+	 */
 	@Override
 	public String getTimeline(String param) {
 		StringBuffer sb = new StringBuffer();
@@ -220,6 +258,10 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		}
 	}
 	
+	/**
+	 * Get followers 
+	 * @return 		 followers list
+	 */
 	@Override
 	public String getFollowers() {
 
@@ -260,6 +302,10 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 		}
 	}
 	
+	/**
+	 * Retweets a tweet
+	 * @return 		 confirmation of retweet
+	 */
 	@Override
 	public String getRetweetsOfMe(){
 

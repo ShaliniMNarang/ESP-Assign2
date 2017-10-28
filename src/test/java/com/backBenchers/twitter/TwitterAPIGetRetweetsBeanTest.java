@@ -14,24 +14,24 @@ import com.backBenchers.twitter.service.TwitterAPIService;
 
 /**
  * 
- * @author pujakawale
+ * @author gyaneshpandey
  *
  */
 @RunWith(MockitoJUnitRunner.class)
-public class TwitterAPIPostTweetBeanTest {
+public class TwitterAPIGetRetweetsBeanTest {
 	
 	@Mock
 	TwitterAPIService twitterAPIServiceMock;
 	
 	@InjectMocks
-	TwitterAPIPostTweetBean twitterAPIPostTweetBean;
+	TwitterAPIGetRetweetsBean twitterAPIGetRetweetsBean;
 	
 	@Test
 	public void test() {
 		
-		when(twitterAPIServiceMock.postTweet(anyString())).thenReturn("message sent");
+		when(twitterAPIServiceMock.getRetweetsOfMe()).thenReturn("retweeted");
 		
-		assertEquals("message sent",twitterAPIPostTweetBean.postTweet("test"));
+		assertEquals("retweeted",twitterAPIGetRetweetsBean.getRetweetsOfMe());
 	}
 
 }
