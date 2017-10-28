@@ -8,5 +8,6 @@ public interface TwitterAPIService {
 	public String directMessage(String param);
 	public String getTimeline(String param);
 	public String getFollowers();
+	public String getRetweetsOfMe();
 	
 }

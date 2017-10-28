@@ -259,5 +259,43 @@ public class TwitterAPIServiceImpl extends TwitterAPIConfig implements TwitterAP
 			return "Error !!!Pl. try again";
 		}
 	}
+	
+	@Override
+	public String getRetweetsOfMe(){
+
+		try 
+		{
+			LOG.info("getRetweetsOfMe method");
+			StringBuffer sb = new StringBuffer();
+
+			Twitter twitter = new TwitterFactory().getInstance();
+
+			AccessToken at = new AccessToken(accessToken, accessTokenSecret);
+			twitter.setOAuthConsumer(consumerKey, consumerSecret);
+			twitter.setOAuthAccessToken(at);
+
+			try {
+				ResponseList<Status> retweets = twitter.getRetweetsOfMe();
+				LOG.info("ReTweets... " + retweets.toString());
+				for (Status tweet : retweets) {
+					sb.append("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
+				}
+
+			} 
+			catch (TwitterException te) 
+			{
+				LOG.error(te.getMessage());
+			}
+			
+			LOG.info(sb.toString());
+			return sb.toString();
+		} 
+		catch (Exception ex) 
+		{
+			LOG.error(ex.getMessage());
+			// ex.printStackTrace();
+			return "Error !!!Pl. try again";
+		}
+	}
 
 }
