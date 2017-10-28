@@ -32,6 +32,10 @@ myApp.config(function ($routeProvider) {
             templateUrl: "getFollowers.html",
             controller: "getFollowersController"
         })
+        .when("/getRetweetsOfMe", {
+            templateUrl: "getRetweetsOfMe.html",
+            controller: "getRetweetsOfMeController"
+        })
         .when("/timeline", {
             templateUrl: "timeline.html",
             controller: "timelineController"
@@ -66,4 +70,9 @@ myApp.controller('timelineController', function ($scope) {
 
 myApp.controller('getFollowersController', function ($scope) {
     console.log('getFollowersController starting');
+});
+
+myApp.controller('getRetweetsOfMeController', function ($scope) {
+	getRetweetsOfMe();
+    console.log('getRetweetsOfMeController starting');
 });
