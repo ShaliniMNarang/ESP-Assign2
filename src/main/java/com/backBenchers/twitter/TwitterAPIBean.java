@@ -27,8 +27,9 @@ public class TwitterAPIBean extends TwitterAPIConfig {
 	}
 	
 		public static void main(String args[]) {
-//			TwitterAPIBean o = new TwitterAPIBean();
-//			System.out.println(o.getTweet("Trump"));
+			//this method is updated to test Jenkins. It may lead to a NPE as the service object is not initialized
+			TwitterAPIBean o = new TwitterAPIBean();
+			System.out.println(o.getTweet("Trump"));
 	}
 	
 }
