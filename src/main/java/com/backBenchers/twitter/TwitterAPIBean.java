@@ -26,9 +26,9 @@ public class TwitterAPIBean extends TwitterAPIConfig {
 		return twitterAPIService.getTweet(param);
 	}
 	
-//		public static void main(String args[]) {
+		public static void main(String args[]) {
 //			TwitterAPIBean o = new TwitterAPIBean();
 //			System.out.println(o.getTweet("Trump"));
-//		}
-//	
+	}
+	
 }
